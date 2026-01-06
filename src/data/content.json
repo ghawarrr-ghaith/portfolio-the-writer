@@ -1,0 +1,153 @@
+{
+    "hero": {
+        "tagline": "The Writer / The Coder",
+        "titlePrefix": "WELCOME TO THE",
+        "titleMain": "DARK PLACE",
+        "ctaText": "View Case Files",
+        "draftText": "Draft 1 // Page 1",
+        "coordText": "Coordinates: Unknown"
+    },
+    "about": {
+        "sectionTitle": {
+            "subtitle": "Chapter 1",
+            "title": "The Story"
+        },
+        "heading": "It's not a loop, it's a spiral.",
+        "description1": "I am a Full Stack Developer obsessed with narrative and user experience. Like a writer trapped in a story, I iterate through code, debugging the darkness to find the light of a perfect solution.",
+        "description2": "My journey began in the void of command lines. Over time, I mastered the art of crafting digital realities using React, Node, and the modern web stack. Every project is a new manuscript, waiting to be written.",
+        "currentObjectiveLabel": "Current Objective",
+        "currentObjectiveText": "Build immersive web experiences that haunt the memory.",
+        "profileImage": "/assets/profile-pec.webp",
+        "profileLabel": "The Protagonist"
+    },
+    "projects": {
+        "sectionTitle": {
+            "subtitle": "Chapter 2",
+            "title": "Case Files"
+        },
+        "items": [
+            {
+                "id": 1,
+                "title": "E-Commerce Platform",
+                "category": "Full Stack",
+                "description": "A headless commerce solution built with Next.js and Shopify. Designed for high performance and seamless user journeys.",
+                "imageUrl": "/assets/projects/project-img-a.webp",
+                "technologies": [
+                    "React",
+                    "TypeScript",
+                    "Node.js"
+                ]
+            },
+            {
+                "id": 2,
+                "title": "Task Analytics",
+                "category": "Dashboard",
+                "description": "Real-time data visualization dashboard for tracking productivity metrics. Dark mode enabled by default.",
+                "imageUrl": "/assets/projects/project-img-b.webp",
+                "technologies": [
+                    "Vue.js",
+                    "D3.js",
+                    "Firebase"
+                ]
+            },
+            {
+                "id": 3,
+                "title": "Social Network",
+                "category": "Mobile App",
+                "description": "A community platform for artists to share localized events. Built with React Native.",
+                "imageUrl": "/assets/projects/project-img-c.webp",
+                "technologies": [
+                    "React Native",
+                    "Redux",
+                    "AWS"
+                ]
+            }
+        ]
+    },
+    "skills": {
+        "sectionTitle": {
+            "subtitle": "Chapter 3",
+            "title": "Mind Place"
+        },
+        "categories": [
+            {
+                "category": "Frontend",
+                "items": [
+                    "React",
+                    "TypeScript",
+                    "Tailwind CSS",
+                    "Next.js",
+                    "Three.js"
+                ]
+            },
+            {
+                "category": "Backend",
+                "items": [
+                    "Node.js",
+                    "Python",
+                    "PostgreSQL",
+                    "GraphQL",
+                    "Redis"
+                ]
+            },
+            {
+                "category": "Tools",
+                "items": [
+                    "Docker",
+                    "AWS",
+                    "Git",
+                    "Figma",
+                    "Linux"
+                ]
+            }
+        ],
+        "statusLabel": "Status: Mastered",
+        "confidentialLabel": "CONFIDENTIAL",
+        "deductionText": "Deduction Complete"
+    },
+    "contact": {
+        "sectionTitle": {
+            "subtitle": "End of the Line",
+            "title": "Contact"
+        },
+        "heading": {
+            "line1": "Ready to write the",
+            "line2": "next chapter?",
+            "line3": "Let's Talk."
+        },
+        "email": {
+            "label": "Email",
+            "value": "hello@wake.dev"
+        },
+        "location": {
+            "label": "Location",
+            "value": "Bright Falls, WA"
+        },
+        "form": {
+            "nameLabel": "Subject Name",
+            "namePlaceholder": "John Doe",
+            "emailLabel": "Communication Channel",
+            "emailPlaceholder": "john@example.com",
+            "messageLabel": "Message Content",
+            "messagePlaceholder": "Type your message...",
+            "submitButton": "Send Transmission"
+        }
+    },
+    "footer": {
+        "copyright": "© 2024 The Creator.",
+        "links": [
+            {
+                "label": "Twitter",
+                "url": "#"
+            },
+            {
+                "label": "LinkedIn",
+                "url": "#"
+            },
+            {
+                "label": "Github",
+                "url": "#"
+            }
+        ]
+    }
+}

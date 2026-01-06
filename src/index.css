@@ -1,0 +1,62 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-aw-scarlet: #FF2400;
+  --color-aw-yellow: #FBC02D;
+  --color-aw-black: #050505;
+  --color-aw-dark: #101010;
+  --color-aw-grey: #202020;
+  --color-aw-paper: #f0f0f0;
+  --color-aw-ink: #1a1a1a;
+
+  --font-display: 'Oswald', sans-serif;
+  --font-body: 'Inter', sans-serif;
+
+  --animate-fade-in-slow: fade-in 1.5s ease-out forwards;
+
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+}
+
+:root {
+  --scroll-track: #f0f0f0;
+  --scroll-thumb: #ccc;
+  --scroll-thumb-hover: #FF2400;
+}
+
+.dark {
+  --scroll-track: #050505;
+  --scroll-thumb: #333;
+  --scroll-thumb-hover: #FF2400;
+}
+
+body {
+  background-color: var(--scroll-track);
+  overflow-x: hidden;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--scroll-track);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--scroll-thumb);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--scroll-thumb-hover);
+}

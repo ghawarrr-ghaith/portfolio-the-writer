@@ -1,0 +1,9 @@
+@echo off
+cd /d "%~dp0"
+for %%I in (.) do set CurrDirName=%%~nxI
+echo Starting %CurrDirName%...
+echo Installing dependencies...
+call npm install
+echo Starting server...
+npm run dev -- --open
+pause
