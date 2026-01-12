@@ -1,5 +1,8 @@
 import React from 'react';
-import SectionTitle from '../components/SectionTitle';
+import SectionTitle from '../components/section-title';
+import Button from '../components/button';
+import Input from '../components/input';
+import InputWide from '../components/input-wide';
 import content from '../data/content.json';
 import { Mail, MapPin } from 'lucide-react';
 
@@ -46,39 +49,27 @@ const Contact: React.FC = () => {
 
           {/* Form */}
           <form className="space-y-6 p-8 border border-gray-200 dark:border-gray-800 bg-white/50 dark:bg-gray-900/30 backdrop-blur-sm transition-colors duration-500 shadow-lg dark:shadow-none">
-            <div>
-              <label className="block font-display text-xs uppercase tracking-widest text-aw-scarlet mb-2">{contactData.form.nameLabel}</label>
-              <input
-                type="text"
-                className="w-full bg-white dark:bg-black/50 border-b-2 border-gray-300 dark:border-gray-700 text-gray-900 dark:text-white px-4 py-3 focus:outline-none focus:border-aw-scarlet transition-colors font-body"
-                placeholder={contactData.form.namePlaceholder}
-              />
-            </div>
+            <Input
+              label={contactData.form.nameLabel}
+              type="text"
+              placeholder={contactData.form.namePlaceholder}
+            />
 
-            <div>
-              <label className="block font-display text-xs uppercase tracking-widest text-aw-scarlet mb-2">{contactData.form.emailLabel}</label>
-              <input
-                type="email"
-                className="w-full bg-white dark:bg-black/50 border-b-2 border-gray-300 dark:border-gray-700 text-gray-900 dark:text-white px-4 py-3 focus:outline-none focus:border-aw-scarlet transition-colors font-body"
-                placeholder={contactData.form.emailPlaceholder}
-              />
-            </div>
+            <Input
+              label={contactData.form.emailLabel}
+              type="email"
+              placeholder={contactData.form.emailPlaceholder}
+            />
 
-            <div>
-              <label className="block font-display text-xs uppercase tracking-widest text-aw-scarlet mb-2">{contactData.form.messageLabel}</label>
-              <textarea
-                rows={4}
-                className="w-full bg-white dark:bg-black/50 border-b-2 border-gray-300 dark:border-gray-700 text-gray-900 dark:text-white px-4 py-3 focus:outline-none focus:border-aw-scarlet transition-colors font-body resize-none"
-                placeholder={contactData.form.messagePlaceholder}
-              ></textarea>
-            </div>
+            <InputWide
+              label={contactData.form.messageLabel}
+              rows={4}
+              placeholder={contactData.form.messagePlaceholder}
+            />
 
-            <button
-              type="submit"
-              className="w-full bg-aw-scarlet text-white font-display font-bold uppercase tracking-[0.2em] py-4 hover:bg-red-700 transition-colors mt-4"
-            >
+            <Button type="submit">
               {contactData.form.submitButton}
-            </button>
+            </Button>
           </form>
 
         </div>

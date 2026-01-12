@@ -1,5 +1,5 @@
 import React from 'react';
-import SectionTitle from '../components/SectionTitle';
+import SectionTitle from '../components/section-title';
 import content from '../data/content.json';
 import { ExternalLink, Github } from 'lucide-react';
 

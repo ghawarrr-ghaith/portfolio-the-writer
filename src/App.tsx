@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from 'react';
-import NavBar from './components/NavBar';
+import TopBar from './components/bar-top';
 import Hero from './sections/Hero';
 import About from './sections/About';
 import Projects from './sections/Projects';
 import Skills from './sections/Skills';
 import Contact from './sections/Contact';
-import FadeInSection from './components/FadeInSection';
+import FadeInSection from './components/fade-in-section';
 import { useKeyboardNavigation } from './hooks/useKeyboardNavigation';
-import Footer from './components/Footer';
+import BottomBar from './components/bar-bottom';
 
 const App: React.FC = () => {
   const [isDark, setIsDark] = useState(true);
@@ -39,7 +39,7 @@ const App: React.FC = () => {
         {/* Vignette effect - lighter in light mode */}
         <div className="fixed inset-0 pointer-events-none z-40 bg-[radial-gradient(circle_at_center,transparent_0%,rgba(0,0,0,0.2)_100%)] dark:bg-[radial-gradient(circle_at_center,transparent_0%,rgba(0,0,0,0.6)_100%)]"></div>
 
-        <NavBar isDark={isDark} toggleTheme={toggleTheme} />
+        <TopBar isDark={isDark} toggleTheme={toggleTheme} />
 
         <main className="relative z-10">
           <FadeInSection id="hero">
@@ -63,7 +63,7 @@ const App: React.FC = () => {
           </FadeInSection>
         </main>
 
-        <Footer />
+        <BottomBar />
       </div>
     </div>
   );
