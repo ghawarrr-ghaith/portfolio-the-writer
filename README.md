@@ -16,13 +16,12 @@ A psychological thriller-inspired portfolio inspired by **Alan Wake** (*Remedy U
 -   **Themed UI:** Narrative-driven design with typewriter fonts and stark contrast.
 -   **Interactive Elements:** Vignette effects, smooth fade-ins, and light/dark toggle.
 -   **Responsive Design:** Fully optimized for mobile, tablet, and desktop.
--   **Modern Architecture:** Clean `src` structure with separate components, sections, and data.
+-   **Flat Architecture:** Inlined component logic for a sleek, manageable codebase.
 
 ## Project Structure
 ```text
 src/
-├── components/   # Reusable UI components
-├── data/         # Content and configuration
+├──├── data/         # Content and configuration
 ├── sections/     # Page sections (Hero, About, Projects, etc.)
 └── App.tsx       # Main application entry
 ```
