@@ -1,15 +1,22 @@
 import React from 'react';
-import SectionTitle from '../components/section-title';
 import content from '../data/content.json';
 import { ExternalLink, Github } from 'lucide-react';
 
-const Projects: React.FC = () => {
+const SectionProjects: React.FC = () => {
   const { projects: projectsData } = content;
 
   return (
     <section id="projects" className="py-24 bg-aw-paper dark:bg-aw-black transition-colors duration-500">
       <div className="max-w-7xl mx-auto px-6">
-        <SectionTitle subtitle={projectsData.sectionTitle.subtitle} title={projectsData.sectionTitle.title} align="right" />
+        <div className={`flex flex-col mb-16 md:mb-24 text-right items-end`}>
+          <span className="font-display tracking-[0.2em] text-sm md:text-base text-gray-500 dark:text-gray-400 uppercase mb-2 block">
+            {projectsData.sectionTitle.subtitle}
+          </span>
+          <h2 className="font-display text-aw-scarlet text-6xl md:text-8xl lg:text-9xl font-bold uppercase leading-[0.85] tracking-tight relative z-10 mix-blend-multiply dark:mix-blend-screen transition-all duration-500">
+            {projectsData.sectionTitle.title}
+          </h2>
+          <div className="h-1 w-24 bg-aw-scarlet mt-6"></div>
+        </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projectsData.items.map((project) => (
@@ -68,4 +75,4 @@ const Projects: React.FC = () => {
   );
 };
 
-export default Projects;
+export default SectionProjects;

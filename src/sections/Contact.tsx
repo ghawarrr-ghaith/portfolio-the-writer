@@ -1,18 +1,22 @@
 import React from 'react';
-import SectionTitle from '../components/section-title';
-import Button from '../components/button';
-import Input from '../components/input';
-import InputWide from '../components/input-wide';
 import content from '../data/content.json';
 import { Mail, MapPin } from 'lucide-react';
 
-const Contact: React.FC = () => {
+const SectionContact: React.FC = () => {
   const { contact: contactData } = content;
 
   return (
     <section id="contact" className="py-24 bg-aw-paper dark:bg-aw-black min-h-[80vh] flex flex-col justify-center transition-colors duration-500">
       <div className="max-w-5xl mx-auto px-6 w-full">
-        <SectionTitle subtitle={contactData.sectionTitle.subtitle} title={contactData.sectionTitle.title} align="left" />
+        <div className={`flex flex-col mb-16 md:mb-24 text-left items-start`}>
+          <span className="font-display tracking-[0.2em] text-sm md:text-base text-gray-500 dark:text-gray-400 uppercase mb-2 block">
+            {contactData.sectionTitle.subtitle}
+          </span>
+          <h2 className="font-display text-aw-scarlet text-6xl md:text-8xl lg:text-9xl font-bold uppercase leading-[0.85] tracking-tight relative z-10 mix-blend-multiply dark:mix-blend-screen transition-all duration-500">
+            {contactData.sectionTitle.title}
+          </h2>
+          <div className="h-1 w-24 bg-aw-scarlet mt-6"></div>
+        </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
 
@@ -49,27 +53,39 @@ const Contact: React.FC = () => {
 
           {/* Form */}
           <form className="space-y-6 p-8 border border-gray-200 dark:border-gray-800 bg-white/50 dark:bg-gray-900/30 backdrop-blur-sm transition-colors duration-500 shadow-lg dark:shadow-none">
-            <Input
-              label={contactData.form.nameLabel}
-              type="text"
-              placeholder={contactData.form.namePlaceholder}
-            />
+            <div>
+              <label className="block font-display text-xs uppercase tracking-widest text-aw-scarlet mb-2">{contactData.form.nameLabel}</label>
+              <input
+                type="text"
+                placeholder={contactData.form.namePlaceholder}
+                className={`w-full bg-white dark:bg-black/50 border-b-2 border-gray-300 dark:border-gray-700 text-gray-900 dark:text-white px-4 py-3 focus:outline-none focus:border-aw-scarlet transition-colors font-body`}
+              />
+            </div>
 
-            <Input
-              label={contactData.form.emailLabel}
-              type="email"
-              placeholder={contactData.form.emailPlaceholder}
-            />
+            <div>
+              <label className="block font-display text-xs uppercase tracking-widest text-aw-scarlet mb-2">{contactData.form.emailLabel}</label>
+              <input
+                type="email"
+                placeholder={contactData.form.emailPlaceholder}
+                className={`w-full bg-white dark:bg-black/50 border-b-2 border-gray-300 dark:border-gray-700 text-gray-900 dark:text-white px-4 py-3 focus:outline-none focus:border-aw-scarlet transition-colors font-body`}
+              />
+            </div>
 
-            <InputWide
-              label={contactData.form.messageLabel}
-              rows={4}
-              placeholder={contactData.form.messagePlaceholder}
-            />
+            <div>
+              <label className="block font-display text-xs uppercase tracking-widest text-aw-scarlet mb-2">{contactData.form.messageLabel}</label>
+              <textarea
+                rows={4}
+                placeholder={contactData.form.messagePlaceholder}
+                className={`w-full bg-white dark:bg-black/50 border-b-2 border-gray-300 dark:border-gray-700 text-gray-900 dark:text-white px-4 py-3 focus:outline-none focus:border-aw-scarlet transition-colors font-body resize-none`}
+              ></textarea>
+            </div>
 
-            <Button type="submit">
+            <button
+              type="submit"
+              className={`w-full bg-aw-scarlet text-white font-display font-bold uppercase tracking-[0.2em] py-4 hover:bg-red-700 transition-colors mt-4`}
+            >
               {contactData.form.submitButton}
-            </Button>
+            </button>
           </form>
 
         </div>
@@ -78,4 +94,4 @@ const Contact: React.FC = () => {
   );
 };
 
-export default Contact;
+export default SectionContact;

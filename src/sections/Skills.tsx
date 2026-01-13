@@ -1,14 +1,21 @@
 import React from 'react';
-import SectionTitle from '../components/section-title';
 import content from '../data/content.json';
 
-const Skills: React.FC = () => {
+const SectionSkills: React.FC = () => {
   const { skills: skillsData } = content;
 
   return (
     <section id="skills" className="py-24 bg-gray-100 dark:bg-aw-dark relative overflow-hidden transition-colors duration-500">
       <div className="max-w-6xl mx-auto px-6 relative z-10">
-        <SectionTitle subtitle={skillsData.sectionTitle.subtitle} title={skillsData.sectionTitle.title} align="center" />
+        <div className={`flex flex-col mb-16 md:mb-24 text-center items-center`}>
+          <span className="font-display tracking-[0.2em] text-sm md:text-base text-gray-500 dark:text-gray-400 uppercase mb-2 block">
+            {skillsData.sectionTitle.subtitle}
+          </span>
+          <h2 className="font-display text-aw-scarlet text-6xl md:text-8xl lg:text-9xl font-bold uppercase leading-[0.85] tracking-tight relative z-10 mix-blend-multiply dark:mix-blend-screen transition-all duration-500">
+            {skillsData.sectionTitle.title}
+          </h2>
+          <div className="h-1 w-24 bg-aw-scarlet mt-6"></div>
+        </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mt-16">
           {skillsData.categories.map((skillGroup, index) => (
@@ -50,4 +57,4 @@ const Skills: React.FC = () => {
   );
 };
 
-export default Skills;
+export default SectionSkills;

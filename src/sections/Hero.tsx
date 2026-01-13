@@ -1,7 +1,7 @@
 import React from 'react';
 import content from '../data/content.json';
 
-const Hero: React.FC = () => {
+const SectionHero: React.FC = () => {
   const { hero } = content;
 
   return (
@@ -39,4 +39,4 @@ const Hero: React.FC = () => {
   );
 };
 
-export default Hero;
+export default SectionHero;
